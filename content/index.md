@@ -8,7 +8,9 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [An example note](example.md) demonstrates equations, a figure, a table, and a cross-reference.
 
-[Create New Article from ChatGPT Work](create-new-article-from-chatgpt-work.md) describes the writing environment, GitHub handoff, automatic build, and publication checks.
+[Create New Article from ChatGPT Work](create-new-article-from-chatgpt-work.md) describes the Work writing environment, GitHub handoff, automatic build, and publication checks.
+
+[Create New Article from ChatGPT Chat](create-new-article-from-chatgpt-chat.md) documents the repository-first workflow that works from Chat using the connected GitHub plugin and GitHub Actions.
 
 ## How notes grow
 

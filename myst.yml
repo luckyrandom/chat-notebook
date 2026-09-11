@@ -7,6 +7,7 @@ project:
     - file: content/index.md
     - file: content/example.md
     - file: content/create-new-article-from-chatgpt-work.md
+    - file: content/create-new-article-from-chatgpt-chat.md
 site:
   template: book-theme
   options:
