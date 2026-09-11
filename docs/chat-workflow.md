@@ -2,7 +2,7 @@
 
 ## Prompt to use in Chat
 
-> Use the GitHub plugin to save this note in `luckyrandom/chat-notebook`. First read `README.md`, `docs/chat-workflow.md`, `myst.yml`, and any files you need to update. Create or update the note under `content/`, save its images under `content/assets/`, and add new pages to the table of contents in `myst.yml`. Preserve the approved wording and references and use the shared theme. Commit the changes to `main` unless I specify another branch. Then check the “Check notebook” GitHub Actions run for that exact commit. Give me links to the saved note, the commit, and the build result. Fix build errors caused by your changes. Saving to GitHub is not public publication; publish only after I approve a preview.
+> Use the GitHub plugin to save this note in `luckyrandom/chat-notebook`. First read `README.md`, `docs/chat-workflow.md`, `myst.yml`, and any files you need to update. Create or update the note under `content/`, save its images under `content/assets/`, and add new pages to the table of contents in `myst.yml`. Preserve the approved wording and references and use the shared theme. Save drafts on a descriptive branch and open a pull request to `main`. Merge into `main` only when I ask to publish, because it deploys automatically once Pages is enabled. Then check the “Check notebook” GitHub Actions run for that exact commit. Give me links to the saved note, the commit, and the build result. Fix build errors caused by your changes. The repository is public, including draft branches. Saving a draft branch does not update the website. Rendered draft preview URLs are not available yet; do not promise one.
 
 “This note” means the content developed in the current conversation. If the subject or intended text is missing, ask which note to save.
 
@@ -21,16 +21,18 @@ Use the GitHub plugin's file and commit tools. The user does not need to supply 
 5. **Check the exact commit.** Verify that the target branch contains the saved commit. A push triggers `.github/workflows/check.yml`, which installs dependencies, runs tests, validates MyST, generates HTML, and uploads build artifacts. Find the run whose head SHA matches the final commit; a successful older run does not validate new changes. If individual file writes produced multiple commits, check the final one.
 6. **Report the result.** Return links to the note in GitHub, the commit, and the Actions run. Say whether the build passed, failed, or is still queued/running. On failure, inspect logs and fix errors introduced by the changes while preserving approved content. If inspection is unavailable, say the build result is unverified.
 
-Use the user-specified branch, or `main` for ordinary saves when no branch is specified. If repository protections require a pull request, save on a branch and open a PR instead; report that the note is pending merge.
+Use the user-specified draft branch, or create a descriptive `notes/<slug>` branch from the latest `main`. Save there and open a pull request. Only merge or commit to `main` after explicit publication authorization. After an authorized merge, check both build and deployment for the merged commit and return the URL from the deployment output.
 
 If the plugin is disconnected, lacks write permission, or has only read tools, explain the specific missing access. Do not silently substitute a ZIP handoff.
 
 ## What is available today
 
-The private GitHub repository and its Actions build are working; the initial build passed. The same plugin-based write operations were exercised from Work. Their availability in a particular Chat session must be checked there.
+The repository is public. GitHub Actions validates branches and pull requests. Successful builds on `main` deploy to GitHub Pages once repository Settings → Pages → Source is set to GitHub Actions. See [deployment setup](deployment.md).
 
-A GitHub file link is a saved source note, not a published website. An Actions artifact is downloadable build output, not a hosted preview. Hosted preview links and approval-based publication are not connected yet. Do not invent a preview URL or describe a successful build as publication.
+Build and deployment are separate results: do not call a successful build a successful publication. Return the deployment URL only after the deploy job succeeds. A GitHub source link or downloadable artifact is not a hosted preview.
 
-## Intended publishing extension
+The plugin-based write path was exercised from Work. Check the write capabilities available in the current Chat session.
 
-After source is committed, hosting will expose the built revision at a preview URL. Chat will return that link, obtain approval for that revision, and promote the already-built files. That future step must preserve the exact reviewed content.
+## Preview limitation
+
+This first version builds again after a merge and publishes that build. It does not provide rendered draft preview URLs or promotion of an earlier preview's exact bytes. Review source in the pull request for now; rendered previews and exact-artifact promotion remain future work.

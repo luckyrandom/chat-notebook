@@ -19,11 +19,11 @@ Open http://localhost:8000. HTML output needs a static HTTP server; double-click
 
 ## Authoring in Chat
 
-Ask Chat to use the GitHub plugin to create or update source files in `luckyrandom/chat-notebook`, commit them, and check the build. Read [the Chat guide](docs/chat-workflow.md) for a ready-to-use prompt and precise assistant instructions.
+Ask Chat to use the GitHub plugin to save drafts on a branch in `luckyrandom/chat-notebook`, open a pull request, and check the build. Merge into `main` when you ask to publish. Read [the Chat guide](docs/chat-workflow.md) for a ready-to-use prompt and precise assistant instructions.
 
 “Upload” means saving Markdown, assets, and configuration as repository files. Chat does not need local Git, npm, Python, or a source ZIP for this workflow. GitHub Actions handles dependency installation, validation, and rendering.
 
-Return the saved note's GitHub link and the Actions result. Hosted preview links and public publishing are not connected yet.
+Return the saved note's GitHub link and the Actions result. Successful builds on `main` deploy to GitHub Pages after the one-time [Pages setup](docs/deployment.md). Draft branches do not deploy. The repository and its draft branches are public.
 
 ## Reviewable revisions
 
@@ -34,7 +34,7 @@ python3 tools/package.py site
 python3 tools/package.py verify dist/site-<revision>.zip
 ```
 
-Each archive contains a manifest of file hashes. Its name identifies the exact packaged bytes. Publish the reviewed site archive without rebuilding. These hashes provide integrity, not identity or authorization. Production publication requires an authenticated service and user approval; neither is implied by creating an archive.
+Each archive contains a manifest of file hashes. Its name identifies the exact packaged bytes. Publish the reviewed site archive without rebuilding. These hashes provide integrity, not identity or authorization. GitHub Pages deploys the HTML artifact from the successful `main` build. Authorize publication before merging into `main`. This initial workflow does not promote a previously reviewed draft archive.
 
 ## Layout
 
@@ -42,14 +42,14 @@ Each archive contains a manifest of file hashes. Its name identifies the exact p
 - `themes/`: shared presentation.
 - `tools/`: portable archive creation and integrity verification.
 - `docs/`: architecture, compatibility, and setup.
-- `.github/workflows/check.yml`: build and archive checks; no deployment.
+- `.github/workflows/check.yml`: branch validation and automatic Pages deployment from `main`.
 - `_build/`, `dist/`: generated output, excluded from source control.
 
 ## Current scope
 
 Working bootstrap: MyST example, shared CSS, pinned CLI, source/site archives, local verification, CI definition.
 
-Next: verify the GitHub write workflow in the intended Chat session, hosted preview URLs, exact-artifact promotion, revision listing and rollback. Arbitrary HTML and interactive applications are future input formats, not implemented by this MyST starter.
+Next: complete Pages setup, verify the GitHub write workflow in the intended Chat session, then add draft preview URLs, exact-artifact promotion, revision listing and rollback. Arbitrary HTML and interactive applications are future input formats, not implemented by this MyST starter.
 
 The CLI wrapper falls back to loopback discovery if a hosted environment denies network-interface enumeration. Other errors are preserved.
 
@@ -63,6 +63,6 @@ MyST CLI is pinned by `package-lock.json`. Its upstream book theme may download 
 
 ## GitHub access
 
-The repository is [luckyrandom/chat-notebook](https://github.com/luckyrandom/chat-notebook), and is private. Give the GitHub plugin access to this repository. Authoring requires repository write tools; reading repository files alone is insufficient. The initial GitHub Actions build passed.
+The repository is [luckyrandom/chat-notebook](https://github.com/luckyrandom/chat-notebook), and is public. Give the GitHub plugin access to this repository. Authoring requires repository write tools; reading repository files alone is insufficient. The initial GitHub Actions build passed.
 
-The existing source-archive utility remains in the code for now, but is not part of the Chat authoring workflow.
+The existing source-archive utility remains in the code for now, but is not part of the Chat authoring workflow and is no longer run by CI.

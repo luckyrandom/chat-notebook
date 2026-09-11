@@ -5,6 +5,11 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: notebook-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  BASE_URL: /${{ github.event.repository.name }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,10 +27,31 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run build
-      - run: python3 tools/package.py source
       - run: python3 tools/package.py site
       - uses: actions/upload-artifact@v4
         with:
           name: notebook-${{ github.sha }}
           path: dist/*.zip
           if-no-files-found: error
+      - name: Upload Pages site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _build/html
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check Pages configuration
+        uses: actions/configure-pages@v5
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
