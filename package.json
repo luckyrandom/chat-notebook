@@ -1,0 +1,20 @@
+{
+  "name": "chat-notebook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conversation-born notes and their portable publishing tools",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node tools/run-myst.cjs build --site --strict --ci",
+    "build": "node tools/run-myst.cjs build --html --strict --ci",
+    "preview": "node tools/run-myst.cjs start",
+    "package:source": "python3 tools/package.py source",
+    "package:site": "python3 tools/package.py site",
+    "test": "python3 -m unittest discover -s tools -p \"test_*.py\""
+  },
+  "devDependencies": {
+    "mystmd": "1.10.1"
+  }
+}

@@ -1,0 +1,14 @@
+version: 1
+project:
+  id: chat-notebook
+  title: Chat Notebook
+  description: Notes and explanations developed through conversation.
+  toc:
+    - file: content/index.md
+    - file: content/example.md
+site:
+  template: book-theme
+  options:
+    favicon: content/assets/favicon.svg
+    logo_text: Chat Notebook
+    style: themes/notebook.css

@@ -1,0 +1,5 @@
+/* Notebook theme v1: local system fonts, readable prose, no external font dependency. */
+article { line-height: 1.75; }
+article img { max-width: 100%; height: auto; }
+article table { font-variant-numeric: tabular-nums; }
+@media print { article { font-size: 11pt; } }

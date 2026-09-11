@@ -1,0 +1,31 @@
+name: Check notebook
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run check
+      - run: npm run build
+      - run: python3 tools/package.py source
+      - run: python3 tools/package.py site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: notebook-${{ github.sha }}
+          path: dist/*.zip
+          if-no-files-found: error
