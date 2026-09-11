@@ -6,6 +6,7 @@ project:
   toc:
     - file: content/index.md
     - file: content/example.md
+    - file: content/create-new-article-from-chatgpt-work.md
 site:
   template: book-theme
   options:
