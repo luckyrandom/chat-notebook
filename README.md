@@ -1,8 +1,8 @@
 # Chat Notebook
 
-Notes, reports, and publishing tools in one repository. Author in Chat or Work; build wherever the required tools are available.
+Notes, reports, and publishing tools in one repository. Author through the GitHub plugin in Chat or Work; GitHub Actions validates and builds the website.
 
-## Quick start
+## Local development (optional)
 
 Requires Node.js 22+ and Python 3.10+.
 
@@ -19,15 +19,11 @@ Open http://localhost:8000. HTML output needs a static HTTP server; double-click
 
 ## Authoring in Chat
 
-Read [the Chat guide](docs/chat-workflow.md). Change `content/`, add assets under `content/assets/`, and update `project.toc` in `myst.yml` for new pages. Preserve approved wording.
+Ask Chat to use the GitHub plugin to create or update source files in `luckyrandom/chat-notebook`, commit them, and check the build. Read [the Chat guide](docs/chat-workflow.md) for a ready-to-use prompt and precise assistant instructions.
 
-If Node or networking is unavailable:
+“Upload” means saving Markdown, assets, and configuration as repository files. Chat does not need local Git, npm, Python, or a source ZIP for this workflow. GitHub Actions handles dependency installation, validation, and rendering.
 
-```sh
-python3 tools/package.py source
-```
-
-This creates a portable source ZIP using only Python's standard library. It checks packaging integrity, **not MyST semantics**. A connected builder unpacks the archive and runs the same `npm ci`, check, and build commands. No remote builder or Chat publishing connector is deployed yet.
+Return the saved note's GitHub link and the Actions result. Hosted preview links and public publishing are not connected yet.
 
 ## Reviewable revisions
 
@@ -53,7 +49,7 @@ Each archive contains a manifest of file hashes. Its name identifies the exact p
 
 Working bootstrap: MyST example, shared CSS, pinned CLI, source/site archives, local verification, CI definition.
 
-Next: authenticated Chat integration, hosted preview URLs, exact-artifact promotion, revision listing and rollback. Arbitrary HTML and interactive applications are future input formats, not implemented by this MyST starter.
+Next: verify the GitHub write workflow in the intended Chat session, hosted preview URLs, exact-artifact promotion, revision listing and rollback. Arbitrary HTML and interactive applications are future input formats, not implemented by this MyST starter.
 
 The CLI wrapper falls back to loopback discovery if a hosted environment denies network-interface enumeration. Other errors are preserved.
 
@@ -65,13 +61,8 @@ MyST CLI is pinned by `package-lock.json`. Its upstream book theme may download 
 - https://mystmd.org/guide/website-templates
 - https://mystmd.org/guide/table-of-contents
 
-## GitHub setup
+## GitHub access
 
-Create a private empty repository named `chat-notebook` under the intended account, then push this checkout. Private source and public published output are separate choices.
+The repository is [luckyrandom/chat-notebook](https://github.com/luckyrandom/chat-notebook), and is private. Give the GitHub plugin access to this repository. Authoring requires repository write tools; reading repository files alone is insufficient. The initial GitHub Actions build passed.
 
-```sh
-git remote add origin https://github.com/luckyrandom/chat-notebook.git
-git push -u origin main
-```
-
-If starting from the source ZIP, initialize and commit first (`git init -b main`, `git add .`, `git commit -m "Bootstrap Chat Notebook"`). Authorize the GitHub connection to access the new repository if necessary.
+The existing source-archive utility remains in the code for now, but is not part of the Chat authoring workflow.

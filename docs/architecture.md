@@ -2,15 +2,15 @@
 
 One repository contains content and tooling. MyST is the initial authoring format. Markdown remains readable without the renderer. The shared book theme and local CSS provide consistent presentation.
 
-The runtime contract is capability-based, not product-based: use Node when available, Python-only packaging otherwise. Work was used to bootstrap the code; Work is not a required consumer.
+Chat uses the GitHub plugin to commit source files. GitHub Actions installs dependencies, validates MyST, and renders the website. Work was used to bootstrap the code; local Git, Node, and Python are not required for the intended Chat authoring workflow.
 
-Source archives include only content/, themes/, tools/, docs/, myst.yml, package.json, package-lock.json, README.md, .nvmrc, .gitignore, and the CI workflow. They do not include Git history, node_modules, build output, or credentials. Review assets before packaging: every file inside the included trees is part of the source package.
+The repository is the handoff between the authoring assistant and the builder. Source ZIP transfer is not part of this design. The existing packaging code and CI archive steps remain unchanged pending a separate implementation cleanup.
 
 Build archives contain the generated static site and a manifest. Hashes detect accidental or deliberate byte changes relative to a known revision; they do not establish author identity. Remote promotion must authenticate the caller and compare the approved revision to trusted stored state.
 
 ## Remaining milestones
 
-1. Create and push the repository, then observe CI in GitHub.
+1. Completed: private repository created, source uploaded, and initial GitHub CI passed.
 2. Verify an actual Chat-mode connection can submit content and receive tool results.
 3. Select preview visibility and one hosting provider.
 4. Implement isolated builds, revision storage, and preview URLs.
