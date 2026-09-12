@@ -16,6 +16,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How T3 Code Uses Codex and ChatGPT Authentication](how-t3-code-uses-codex.md) explains T3's app-server integration, the official SDK alternatives, and how Codex owns authentication, with core examples and offline-tested client code.
 
+[A Task-First Operating System for Coding Agents](task-first-agent-manager.md) designs an agent-management workflow around durable tasks, versioned briefs, replaceable runs, delivery state, and an attention inbox.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
