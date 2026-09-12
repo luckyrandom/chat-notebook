@@ -14,6 +14,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [Writing a Good Technical Note](writing-a-good-technical-note.md) explains how to emphasize the core snippet, keep the main document minimal, and preserve detailed supporting evidence.
 
+[A Task-First Operating System for Coding Agents](task-first-agent-manager.md) designs an agent-management workflow around durable tasks, versioned briefs, replaceable runs, delivery state, and an attention inbox.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
