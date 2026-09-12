@@ -14,6 +14,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [Writing a Good Technical Note](writing-a-good-technical-note.md) explains how to emphasize the core snippet, keep the main document minimal, and preserve detailed supporting evidence.
 
+[How T3 Code Uses Codex and ChatGPT Authentication](how-t3-code-uses-codex.md) explains T3's app-server integration, the official SDK alternatives, and how Codex owns authentication, with core examples and offline-tested client code.
+
 [A Task-First Operating System for Coding Agents](task-first-agent-manager.md) designs an agent-management workflow around durable tasks, versioned briefs, replaceable runs, delivery state, and an attention inbox.
 
 ## How notes grow

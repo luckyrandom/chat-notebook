@@ -9,6 +9,7 @@ project:
     - file: content/create-new-article-from-chatgpt-work.md
     - file: content/create-new-article-from-chatgpt-chat.md
     - file: content/writing-a-good-technical-note.md
+    - file: content/how-t3-code-uses-codex.md
     - file: content/task-first-agent-manager.md
 site:
   template: book-theme
