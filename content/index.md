@@ -18,6 +18,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [A Task-First Operating System for Coding Agents](task-first-agent-manager.md) designs an agent-management workflow around durable tasks, versioned briefs, replaceable runs, delivery state, and an attention inbox.
 
+[How Agent Managers Know the Status of a Codex Conversation](how-agent-managers-know-codex-status.md) explains how app-server events, hooks, process supervision, terminal observation, Git, and delivery systems become separate activity, attention, outcome, and delivery projections.
+
 [How Pi Uses Codex Quota Without the Codex Harness](pi-codex-quota-custom-harness.md) explains Pi's direct OAuth-backed model connection, the distinction from embedding Codex, and a minimal custom harness with a supporting TypeScript example.
 
 ## How notes grow
