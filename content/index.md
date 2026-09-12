@@ -22,6 +22,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How Pi Uses Codex Quota Without the Codex Harness](pi-codex-quota-custom-harness.md) explains Pi's direct OAuth-backed model connection, the distinction from embedding Codex, and a minimal custom harness with a supporting TypeScript example.
 
+[How Hermes Uses Codex Quota in Two Runtime Modes](how-hermes-uses-codex-quota.md) explains Hermes' direct Responses-based loop, its optional Codex app-server runtime, the two credential stores, and how account-backed usage is attributed.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
