@@ -1,0 +1,37 @@
+{
+  "name": "chat-notebook",
+  "version": "0.1.0",
+  "description": "Capture durable notes, write focused technical documents, and publish them through the Chat Notebook workflow.",
+  "author": {
+    "name": "luckyrandom",
+    "url": "https://github.com/luckyrandom"
+  },
+  "homepage": "https://github.com/luckyrandom/chat-notebook",
+  "repository": "https://github.com/luckyrandom/chat-notebook",
+  "keywords": [
+    "notes",
+    "technical-writing",
+    "documentation",
+    "publishing",
+    "chat-notebook"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chat Notebook",
+    "shortDescription": "Capture, write, and publish durable technical notes",
+    "longDescription": "Turn conversations into durable notes, center technical documents on the core idea, and follow the repository-first workflow for drafting, validating, publishing, and verifying Chat Notebook articles.",
+    "developerName": "luckyrandom",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/luckyrandom/chat-notebook",
+    "defaultPrompt": [
+      "Turn this conversation into a durable note.",
+      "Rewrite this as a focused technical note.",
+      "Save this note to Chat Notebook and open a pull request."
+    ]
+  }
+}
