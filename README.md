@@ -19,11 +19,13 @@ Open http://localhost:8000. HTML output needs a static HTTP server; double-click
 
 ## Authoring in Chat
 
-Ask Chat to use the GitHub plugin to save drafts on a branch in `luckyrandom/chat-notebook`, open a pull request, and check the build. Merge into `main` when you ask to publish. Read [the Chat guide](docs/chat-workflow.md) for a ready-to-use prompt and precise assistant instructions.
+Ask Chat to use the GitHub plugin to save drafts on a branch in `luckyrandom/chat-notebook`, open a pull request, and check the build. Merge into `main` when you ask to publish. Read [the Chat guide](docs/chat-workflow.md) for a ready-to-use prompt and precise assistant instructions. The [publisher skill](.chatgpt/skills/chat-notebook-publisher/SKILL.md) is the canonical workflow.
 
 “Upload” means saving Markdown, assets, and configuration as repository files. Chat does not need local Git, npm, Python, or a source ZIP for this workflow. GitHub Actions handles dependency installation, validation, and rendering.
 
-Return the saved note's GitHub link and the Actions result. Successful builds on `main` deploy to GitHub Pages after the one-time [Pages setup](docs/deployment.md). Draft branches do not deploy. The repository and its draft branches are public.
+For drafts, return the source, pull request, commit, and Actions links with their status. For publication, lead with the deployed article link and report the exact commit, build/deployment result, and live-verification status. Successful builds on `main` deploy to GitHub Pages after the one-time [Pages setup](docs/deployment.md). Draft branches do not deploy. The repository and its draft branches are public.
+
+The default handoff is links and status, not ZIPs or attachments. Do not create or download archive bundles, including for internal verification, unless the user explicitly requests an archive, offline bundle, or artifact-level inspection. Download tools may automatically attach files to the chat. If the live page cannot be checked, report that limitation rather than substituting a build archive.
 
 ## Skill-only ChatGPT plugin
 
@@ -33,16 +35,18 @@ The plugin packages reusable guidance for note taking, technical writing, and th
 
 To manage it from a ChatGPT workspace, import this repository as a GitHub-backed plugin marketplace from the repository root. Use the repository URL as the source, leave the marketplace path empty, and track `main` for merged updates. The plugin's [README](plugins/chat-notebook/README.md) describes its contents and capability boundary.
 
-## Reviewable revisions
+## Optional archive integrity checks
 
-After building:
+These commands are for explicitly requested offline or artifact-integrity work, not the normal Chat publication handoff. After building:
 
 ```sh
 python3 tools/package.py site
 python3 tools/package.py verify dist/site-<revision>.zip
 ```
 
-Each archive contains a manifest of file hashes. Its name identifies the exact packaged bytes. Publish the reviewed site archive without rebuilding. These hashes provide integrity, not identity or authorization. GitHub Pages deploys the HTML artifact from the successful `main` build. Authorize publication before merging into `main`. This initial workflow does not promote a previously reviewed draft archive.
+Each archive contains a manifest of file hashes. Its name identifies the exact packaged bytes. These hashes provide integrity, not identity, authorization, or proof of what the live site serves.
+
+The current Pages workflow rebuilds after an authorized merge to `main` and deploys the HTML artifact from that successful build. It does not promote a previously reviewed draft archive. Exact-artifact promotion without rebuilding is a future capability, not an instruction to download or deliver a ZIP. CI can retain its existing archive artifacts without attaching them to the chat.
 
 ## Layout
 
