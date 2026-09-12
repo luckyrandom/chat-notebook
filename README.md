@@ -25,6 +25,14 @@ Ask Chat to use the GitHub plugin to save drafts on a branch in `luckyrandom/cha
 
 Return the saved note's GitHub link and the Actions result. Successful builds on `main` deploy to GitHub Pages after the one-time [Pages setup](docs/deployment.md). Draft branches do not deploy. The repository and its draft branches are public.
 
+## Skill-only ChatGPT plugin
+
+This repository also distributes a skill-only `chat-notebook` plugin. The marketplace manifest is `.agents/plugins/marketplace.json`, and the plugin source is under `plugins/chat-notebook/`.
+
+The plugin packages reusable guidance for note taking, technical writing, and the Chat Notebook publication workflow. It declares no MCP server and bundles no app connection. Actual repository reads, writes, pull requests, Actions checks, merges, and deployment verification still require a GitHub capability with the necessary access.
+
+To manage it from a ChatGPT workspace, import this repository as a GitHub-backed plugin marketplace from the repository root. Use the repository URL as the source, leave the marketplace path empty, and track `main` for merged updates. The plugin's [README](plugins/chat-notebook/README.md) describes its contents and capability boundary.
+
 ## Reviewable revisions
 
 After building:
