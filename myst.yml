@@ -13,6 +13,7 @@ project:
     - file: content/task-first-agent-manager.md
     - file: content/how-agent-managers-know-codex-status.md
     - file: content/pi-codex-quota-custom-harness.md
+    - file: content/how-hermes-uses-codex-quota.md
 site:
   template: book-theme
   options:
