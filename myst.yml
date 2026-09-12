@@ -11,6 +11,7 @@ project:
     - file: content/writing-a-good-technical-note.md
     - file: content/how-t3-code-uses-codex.md
     - file: content/task-first-agent-manager.md
+    - file: content/how-agent-managers-know-codex-status.md
     - file: content/pi-codex-quota-custom-harness.md
 site:
   template: book-theme
