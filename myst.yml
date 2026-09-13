@@ -19,6 +19,8 @@ project:
     - file: content/zero-number-placeholder-natural-numbers.md
     - file: content/understanding-einstein-relativity.md
     - file: content/relativity-derivations-and-evidence.md
+    - file: content/typeless-alternatives-comparison.md
+    - file: content/typeless-alternatives-evidence-and-testing.md
 site:
   template: book-theme
   options:
