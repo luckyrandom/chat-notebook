@@ -30,6 +30,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [零为什么是数：自然数、占位符与数系发展的两条历史](zero-number-placeholder-natural-numbers.md) 区分零作为数量、运算对象与空位记号的意义，解释自然数从零开始的结构理由，并核对多条历史传统与巴克沙利手稿的测年争议。
 
+[Understanding Einstein's Relativity: Why, How, and Evidence](understanding-einstein-relativity.md) connects special and general relativity to the historical problems, physical meaning, experimental tests, and alternatives. Its [mathematical companion](relativity-derivations-and-evidence.md) provides derivations, a quantitative evidence ledger, and worked exercises.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.

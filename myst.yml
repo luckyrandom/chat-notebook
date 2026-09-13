@@ -17,6 +17,8 @@ project:
     - file: content/iphone-18-pro-xfinity-existing-customer-deals.md
     - file: content/pi-agent-internals-and-control.md
     - file: content/zero-number-placeholder-natural-numbers.md
+    - file: content/understanding-einstein-relativity.md
+    - file: content/relativity-derivations-and-evidence.md
 site:
   template: book-theme
   options:
