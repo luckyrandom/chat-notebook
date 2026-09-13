@@ -15,6 +15,7 @@ project:
     - file: content/pi-codex-quota-custom-harness.md
     - file: content/how-hermes-uses-codex-quota.md
     - file: content/iphone-18-pro-xfinity-existing-customer-deals.md
+    - file: content/pi-agent-internals-and-control.md
     - file: content/zero-number-placeholder-natural-numbers.md
 site:
   template: book-theme
