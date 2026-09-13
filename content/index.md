@@ -26,6 +26,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [iPhone 18 Pro on Xfinity Mobile — Existing-Customer Deal Research](iphone-18-pro-xfinity-existing-customer-deals.md) compares September 2026 discounts, plan and data changes, upgrade-program economics, and historical launch versus holiday offers.
 
+[零为什么是数：自然数、占位符与数系发展的两条历史](zero-number-placeholder-natural-numbers.md) 区分零作为数量、运算对象与空位记号的意义，解释自然数从零开始的结构理由，并核对多条历史传统与巴克沙利手稿的测年争议。
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
