@@ -24,6 +24,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How Hermes Uses Codex Quota in Two Runtime Modes](how-hermes-uses-codex-quota.md) explains Hermes' direct Responses-based loop, its optional Codex app-server runtime, the two credential stores, and how account-backed usage is attributed.
 
+[Understanding Einstein's Relativity: Why, How, and Evidence](understanding-einstein-relativity.md) connects special and general relativity to the historical problems, physical meaning, experimental tests, and alternatives. Its [mathematical companion](relativity-derivations-and-evidence.md) provides derivations, a quantitative evidence ledger, and worked exercises.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.

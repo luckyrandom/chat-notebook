@@ -14,6 +14,8 @@ project:
     - file: content/how-agent-managers-know-codex-status.md
     - file: content/pi-codex-quota-custom-harness.md
     - file: content/how-hermes-uses-codex-quota.md
+    - file: content/understanding-einstein-relativity.md
+    - file: content/relativity-derivations-and-evidence.md
 site:
   template: book-theme
   options:
