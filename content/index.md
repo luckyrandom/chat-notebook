@@ -26,6 +26,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [iPhone 18 Pro on Xfinity Mobile — Existing-Customer Deal Research](iphone-18-pro-xfinity-existing-customer-deals.md) compares September 2026 discounts, plan and data changes, upgrade-program economics, and historical launch versus holiday offers.
 
+[Inside Pi: Minimal Agents, Extensibility, and Control](pi-agent-internals-and-control.md) traces Pi's core loop, context projection, session trees, and extension contracts, then compares its user experience, technology, and control boundaries with Codex, Claude Code, and T3 Code.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
