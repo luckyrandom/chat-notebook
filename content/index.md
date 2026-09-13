@@ -24,6 +24,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How Hermes Uses Codex Quota in Two Runtime Modes](how-hermes-uses-codex-quota.md) explains Hermes' direct Responses-based loop, its optional Codex app-server runtime, the two credential stores, and how account-backed usage is attributed.
 
+[Inside Pi: Minimal Agents, Extensibility, and Control](pi-agent-internals-and-control.md) traces Pi's core loop, context projection, session trees, and extension contracts, then compares its user experience, technology, and control boundaries with Codex, Claude Code, and T3 Code.
+
 ## How notes grow
 
 Ask a question, explore the reasoning, then keep the explanation that stands on its own. Source documents live alongside their references and assets so they can be revised without losing their history.
