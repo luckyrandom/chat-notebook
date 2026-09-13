@@ -28,6 +28,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [Inside Pi: Minimal Agents, Extensibility, and Control](pi-agent-internals-and-control.md) traces Pi's core loop, context projection, session trees, and extension contracts, then compares its user experience, technology, and control boundaries with Codex, Claude Code, and T3 Code.
 
+[零为什么是数：自然数、占位符与数系发展的两条历史](zero-number-placeholder-natural-numbers.md) 区分零作为数量、运算对象与空位记号的意义，解释自然数从零开始的结构理由，并核对多条历史传统与巴克沙利手稿的测年争议。
+
 [Understanding Einstein's Relativity: Why, How, and Evidence](understanding-einstein-relativity.md) connects special and general relativity to the historical problems, physical meaning, experimental tests, and alternatives. Its [mathematical companion](relativity-derivations-and-evidence.md) provides derivations, a quantitative evidence ledger, and worked exercises.
 
 ## How notes grow
