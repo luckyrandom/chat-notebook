@@ -24,6 +24,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How Hermes Uses Codex Quota in Two Runtime Modes](how-hermes-uses-codex-quota.md) explains Hermes' direct Responses-based loop, its optional Codex app-server runtime, the two credential stores, and how account-backed usage is attributed.
 
+[iPhone 18 Pro on Xfinity Mobile — Existing-Customer Deal Research](iphone-18-pro-xfinity-existing-customer-deals.md) compares September 2026 discounts, plan and data changes, upgrade-program economics, and historical launch versus holiday offers.
+
 [Inside Pi: Minimal Agents, Extensibility, and Control](pi-agent-internals-and-control.md) traces Pi's core loop, context projection, session trees, and extension contracts, then compares its user experience, technology, and control boundaries with Codex, Claude Code, and T3 Code.
 
 ## How notes grow
