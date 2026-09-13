@@ -377,15 +377,15 @@ The calculations in Sections 1–6 and 9 are worked deductions from the stated m
 
 [^detail-mm]: A. A. Michelson and E. W. Morley (1887), [On the Relative Motion of the Earth and the Luminiferous Ether](https://en.wikisource.org/wiki/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether), original-paper transcription.
 
-[^detail-muons]: J. Bailey et al. (1977), [Measurements of relativistic time dilatation for positive and negative muons in a circular orbit](https://doi.org/10.1038/268301a0), Nature 268, 301–305.
+[^detail-muons]: J. Bailey et al. (1977), [Measurements of relativistic time dilatation for positive and negative muons in a circular orbit](https://www.nature.com/articles/268301a0), Nature 268, 301–305.
 
-[^detail-rainville]: S. Rainville et al. (2005), [A direct test of E=mc2](https://doi.org/10.1038/4381096a), Nature 438, 1096–1097.
+[^detail-rainville]: S. Rainville et al. (2005), [A direct test of E=mc2](https://www.nature.com/articles/4381096a), Nature 438, 1096–1097.
 
-[^detail-gps]: Neil Ashby (2003), [Relativity in the Global Positioning System](https://doi.org/10.12942/lrr-2003-1), especially the reference surface and clock corrections in Sections 3–6. Equation 35 gives the reference net rate offset used above.
+[^detail-gps]: Neil Ashby (2003), [Relativity in the Global Positioning System](https://link.springer.com/article/10.12942/lrr-2003-1), especially the reference surface and clock corrections in Sections 3–6. Equation 35 gives the reference net rate offset used above.
 
-[^detail-cassini]: B. Bertotti, L. Iess, and P. Tortora (2003), [A test of general relativity using radio links with the Cassini spacecraft](https://doi.org/10.1038/nature01997), Nature 425, 374–376.
+[^detail-cassini]: B. Bertotti, L. Iess, and P. Tortora (2003), [A test of general relativity using radio links with the Cassini spacecraft](https://www.nature.com/articles/nature01997), Nature 425, 374–376.
 
-[^detail-microscope]: P. Touboul et al. (2022), [MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle](https://doi.org/10.1103/PhysRevLett.129.121102), Physical Review Letters 129, 121102.
+[^detail-microscope]: P. Touboul et al. (2022), [MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.121102), Physical Review Letters 129, 121102.
 
 [^detail-pulsar]: M. Kramer et al. (2021), [Strong-field Gravity Tests with the Double Pulsar](https://arxiv.org/abs/2112.06795), Physical Review X 11, 041050.
 
@@ -393,11 +393,11 @@ The calculations in Sections 1–6 and 9 are worked deductions from the stated m
 
 [^detail-gw170817]: B. P. Abbott et al. (2017), [Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A](https://arxiv.org/abs/1710.05834), Astrophysical Journal Letters 848, L13.
 
-[^detail-acuna]: Pablo Acuna (2014), [On the empirical equivalence between special relativity and Lorentz's ether theory](https://doi.org/10.1016/j.shpsb.2014.01.002).
+[^detail-acuna]: Pablo Acuna (2014), [On the empirical equivalence between special relativity and Lorentz's ether theory](https://www.sciencedirect.com/science/article/pii/S1355219814000124).
 
 [^detail-nordstrom]: Nathalie Deruelle (2011), [Nordstrom's scalar theory of gravity and the equivalence principle](https://arxiv.org/abs/1104.4608), especially Section III.
 
-[^detail-bd]: C. Brans and R. H. Dicke (1961), [Mach's Principle and a Relativistic Theory of Gravitation](https://doi.org/10.1103/PhysRev.124.925), Physical Review 124, 925–935.
+[^detail-bd]: C. Brans and R. H. Dicke (1961), [Mach's Principle and a Relativistic Theory of Gravitation](https://journals.aps.org/pr/abstract/10.1103/PhysRev.124.925), Physical Review 124, 925–935.
 
 [^detail-mond]: C. Skordis and T. Zlosnik (2021), [A new relativistic theory for Modified Newtonian Dynamics](https://arxiv.org/abs/2007.00082), Physical Review Letters 127, 161302.
 
