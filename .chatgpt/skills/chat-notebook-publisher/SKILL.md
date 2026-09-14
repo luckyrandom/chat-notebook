@@ -49,6 +49,16 @@ Use the following default distinction unless the user explicitly says otherwise:
 
 If the requested article content is already clear from the current conversation, use it directly. Do not ask the user to repeat material that is already available.
 
+## Deliverable boundary: links, not archives
+
+For ordinary authoring and publication, return repository or article links and an accurate status report. The published deliverable is the hosted article, not a ZIP for the user to download, upload, or run.
+
+Do not create, download, attach, or offer source ZIPs, site ZIPs, or build-artifact bundles unless the user explicitly requests an archive, an offline bundle, or artifact-level inspection. A request to publish or verify a note does not authorize an archive download. CI may still create and upload its existing artifacts; that does not make them Chat deliverables.
+
+Apply this rule before choosing tools, not only when composing the final answer. Some download or export tools automatically surface their output as a user-visible attachment. Calling such a tool "internal verification" does not prevent that side effect.
+
+For normal verification, inspect the exact commit, workflow and job status, text logs, and public page. If live access is blocked, report the verified deployment state and the live-check limitation; do not download an archive as a substitute. Even when explicitly requested, artifact inspection proves only what the artifact contains, not what the public site serves.
+
 ## Authoring rules
 
 New articles normally belong under `content/` using a descriptive kebab-case filename, for example:
@@ -188,6 +198,8 @@ Check at least:
 
 A green deploy job without a live-page check is deployment verification, not full content verification. State which level was actually completed.
 
+If the public page cannot be accessed, say "Deployed; live verification incomplete" and give the observed reason. Return the deployed article URL with that qualification, not an archive attachment. Follow the deliverable boundary above even when an artifact download could provide additional diagnostic evidence.
+
 ## What to return to the user
 
 For a **draft**, return a concise status including:
@@ -199,13 +211,13 @@ For a **draft**, return a concise status including:
 - exact Actions result;
 - any limitations, especially lack of a rendered draft preview.
 
-For a **published article**, lead with the live article link, then state:
+For a **published article**, lead with the deployed article link, then state:
 
 - merge or published commit;
 - build/deployment result;
-- what was checked on the live page.
+- what was checked on the live page, or why live verification remains incomplete.
 
-Do not make the user infer whether the work is merely saved, validated, deployed, or actually verified live.
+Return links and status, not file attachments, unless the user explicitly requested an archive or artifact-level inspection. Do not make the user infer whether the work is merely saved, validated, deployed, or actually verified live.
 
 ## Safety rules for repository integrity
 
@@ -221,4 +233,4 @@ Do not make the user infer whether the work is merely saved, validated, deployed
 
 When asked to create a Chat Notebook article, use this procedure:
 
-> Read the current repository instructions and affected files. Turn the conversation content into a MyST article under `content/`, update the TOC and homepage when appropriate, save all related source changes on a descriptive draft branch, open a pull request, and check the `Check notebook` workflow for the exact final commit. Fix errors caused by the change. Do not merge to `main` unless the user explicitly asks to publish. After publication, verify the resulting `main` workflow and the live GitHub Pages article.
+> Read the current repository instructions and affected files. Turn the conversation content into a MyST article under `content/`, update the TOC and homepage when appropriate, save all related source changes on a descriptive draft branch, open a pull request, and check the `Check notebook` workflow for the exact final commit. Fix errors caused by the change. Do not merge to `main` unless the user explicitly asks to publish. After publication, verify the resulting `main` workflow and the live GitHub Pages article. Return links and precise status, not ZIPs or attachments. If live verification is blocked, report the limitation without downloading an artifact as a substitute.

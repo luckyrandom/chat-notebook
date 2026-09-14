@@ -30,6 +30,10 @@ Keep these states distinct:
 
 A request to write, create, save, update, or draft authorizes a draft branch and pull request, not a merge. Merge to `main` only when the user explicitly asks to publish or merge.
 
+## Deliverables
+
+Return links and status, not ZIPs or attachments. Follow the canonical workflow's deliverable boundary before using download or export tools, including for internal verification. Archive downloads require an explicit request for an archive, offline bundle, or artifact-level inspection. If live access is blocked, report the limitation rather than substituting an archive.
+
 ## Capability boundary
 
 This plugin does not bundle or authorize a GitHub app. Repository actions require a GitHub capability that already has the needed access. If that capability is unavailable or lacks write access, state the missing capability clearly. Do not silently replace the repository workflow with a ZIP, pasted diff, or claim of publication.
