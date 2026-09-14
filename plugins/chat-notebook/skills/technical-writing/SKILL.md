@@ -38,7 +38,9 @@ Do not write a chronological diary of everything tried. Avoid repeated summaries
 
 ## Preserve depth without forcing everyone to read it
 
-Detailed derivations, complete implementations, experiment setup, alternative designs, failure analysis, references, and review evidence can live in appendices, collapsed sections, or linked supporting documents.
+Default to one self-contained article per request. Put detailed derivations, complete implementations, experiment setup, alternative designs, failure analysis, references, and review evidence in descriptively named collapsed sections within that article. Do not split a reference companion out just because the material is long. Create separate articles only when explicitly requested or when each topic is independently useful.
+
+For Chat Notebook, use native MyST `{dropdown}` directives with a descriptive title and four-backtick fences. Use a longer outer fence than the backtick fences inside it. Keep essential assumptions, caveats, and conclusions visible. Tabs suit alternatives, such as Python and JavaScript examples; they should not separate the main explanation from its evidence.
 
 The main note should be quick to understand; the supporting layer should make the conclusion auditable and maintainable.
 

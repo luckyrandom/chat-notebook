@@ -61,32 +61,49 @@ For normal verification, inspect the exact commit, workflow and job status, text
 
 ## Authoring rules
 
-New articles normally belong under `content/` using a descriptive kebab-case filename, for example:
+Default to **one self-contained article per request**. Keep the problem, conclusion, core example, and essential assumptions and caveats visible. Preserve long derivations, complete implementations, evidence, and references in descriptively named, collapsed sections in that same article. Do not generate a companion document merely because the reference material is long. Create separate articles only when explicitly requested or when each topic is independently useful; link them without requiring readers to reconstruct one explanation across files.
+
+Use native MyST dropdowns for supporting detail:
+
+`````markdown
+````{dropdown} Full derivation and worked examples
+Supporting prose, equations, code, citations, and tables go here.
+````
+`````
+
+Dropdowns are closed by default. Use an outer fence longer than the backtick fences inside it. Keep the nesting shallow. Tabs are for alternatives such as language-specific examples, not the main explanation versus its reference material. Avoid handwritten HTML disclosure widgets.
+
+New articles belong under `content/` with an original creation date followed by a kebab-case slug:
 
 ```text
-content/how-something-works.md
+content/2026-09-13-how-something-works.md
 ```
 
-Use MyST-compatible Markdown and follow existing repository conventions.
+Keep the creation date and filename stable when editing. Preserve existing undated filenames and their URLs. Do not prepend dates to the human-readable title; navigation displays the date separately.
 
-A normal article should have frontmatter similar to:
+Use MyST-compatible Markdown and the article frontmatter contract:
 
 ```yaml
 ---
 title: Human Readable Title
 description: One concise sentence describing the article.
+date: 2026-09-13
 ---
 ```
+
+`date` is the original creation date in `YYYY-MM-DD` format, not the last edit date. For a new article it must match the filename prefix. Read `schema/article.schema.json` and `schema/articles.json` before adding other metadata. The registry preserves legacy filenames and compatibility routes.
 
 Prefer semantic Markdown source over handwritten rendered HTML. Use the repository's shared theme instead of reproducing layout inside each article.
 
 When adding a new article:
 
-1. create the Markdown source under `content/`;
-2. add the page to `project.toc` in `myst.yml` without removing existing entries;
-3. add an appropriate link from `content/index.md` when the page should be discoverable from the homepage;
-4. put article assets under `content/assets/` and reference them with repository-relative paths;
-5. preserve existing content and navigation unless the task explicitly changes them.
+1. create the single Markdown source under `content/` with title, description, and date;
+2. run `npm run articles:sync` to regenerate the homepage and TOC, keeping newest articles first and grouped by month;
+3. put article assets under `content/assets/` and reference them with repository-relative paths;
+4. preserve existing article URLs and unrelated content;
+5. check that the visible explanation stands alone and the collapsed references retain the necessary evidence.
+
+When a Chat connector cannot run `npm run articles:sync`, read the navigation generator and make the equivalent homepage/TOC edits through repository tools. GitHub Actions must pass `articles:check` for the final commit; do not claim a local command ran.
 
 Do not commit generated output such as `_build/` or `dist/` unless the repository instructions explicitly change to require it.
 

@@ -2,4 +2,53 @@
 article { line-height: 1.75; }
 article img { max-width: 100%; height: auto; }
 article table { font-variant-numeric: tabular-nums; }
+
+/* MyST dropdown directives render native details/summary elements. Keep the
+   reference material in the article, with a visible keyboard focus target. */
+article details {
+  min-width: 0;
+  margin-block: 1.5rem;
+  border: 1px solid #8886;
+  border-radius: 0.5rem;
+}
+
+article details > summary {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+article details > summary:hover {
+  background-color: #8881;
+}
+
+article details > summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+article details[open] > summary {
+  border-bottom: 1px solid #8886;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+article details > :not(summary) {
+  margin-inline: 1rem;
+  min-width: 0;
+}
+
+article details > :last-child:not(summary) {
+  margin-bottom: 1rem;
+}
+
+/* Long reference snippets and equations scroll within the article column. */
+article details pre,
+article details .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 @media print { article { font-size: 11pt; } }

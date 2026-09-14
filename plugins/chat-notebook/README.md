@@ -8,6 +8,8 @@ This directory packages Chat Notebook as a skill-only plugin. It does not declar
 - `technical-writing`: write concise technical notes around the distinctive idea or core snippet while keeping supporting evidence accessible.
 - `chat-notebook-publisher`: route Chat Notebook repository changes through the canonical repository publishing workflow.
 
+All three skills default to one self-contained article per request: a concise explanation with long reference material in same-page collapsed sections. New articles use dated filenames and creation-date metadata, while existing URLs remain stable.
+
 The publisher skill intentionally does not duplicate the full repository workflow. Before changing `luckyrandom/chat-notebook`, it reads `.chatgpt/skills/chat-notebook-publisher/SKILL.md` from the current `main` branch and treats that file as the source of truth.
 
 ## External capabilities

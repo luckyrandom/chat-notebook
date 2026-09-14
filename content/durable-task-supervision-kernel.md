@@ -1,4 +1,5 @@
 ---
+date: 2026-09-13
 title: Durable Task Supervision Kernel
 description: A minimal task-first supervision architecture that separates task state from executor state and avoids assumptions about Git, specific coding agents, or terminal backends.
 ---

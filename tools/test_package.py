@@ -2,7 +2,7 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
-from package import package, verify, MANIFEST
+from package import package, verify, collect, SOURCE_FILES, MANIFEST
 
 
 class PackagingTests(unittest.TestCase):
@@ -13,6 +13,17 @@ class PackagingTests(unittest.TestCase):
         self.site = self.root / '_build/html'
         self.site.mkdir(parents=True)
         (self.site / 'index.html').write_text('<h1>Approved wording</h1>')
+
+    def test_source_collection_includes_article_schema(self):
+        for name in SOURCE_FILES:
+            (self.root / name).write_text('placeholder')
+        schema = self.root / 'schema'
+        schema.mkdir()
+        (schema / 'article.schema.json').write_text('{"type":"object"}')
+        (schema / 'articles.json').write_text('{"legacyPaths":[]}')
+        payload = collect(self.root, 'source')
+        self.assertIn('schema/article.schema.json', payload)
+        self.assertIn('schema/articles.json', payload)
 
     def test_round_trip_deterministic_and_content_sensitive(self):
         first = package(self.root, 'site')

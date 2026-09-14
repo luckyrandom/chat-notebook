@@ -1,4 +1,5 @@
 ---
+date: 2026-09-11
 title: Writing a Good Technical Note
 description: Put the core snippet at the center, keep the main explanation minimal, and preserve detailed evidence in a folded supporting layer.
 ---
@@ -27,12 +28,38 @@ Keep enough information visible for the reader to understand and use the techniq
 
 The goal is not the fewest possible words. It is the least unnecessary work for the reader.
 
-## Preserve the depth in a folded supporting layer
+## Keep the reference layer in the same article
 
-A concise note can—and often should—have extensive supporting documentation. Put that material in collapsed sections, appendices, or clearly linked references so it is available without interrupting the main explanation.
+Default to **one self-contained article per request**, with long supporting material folded into named sections beside the explanation it supports. Length alone is not a reason to create an evidence companion. Separate articles are appropriate when explicitly requested or when each topic answers an independently useful question.
 
-This layer can contain derivations, full implementations, architectural details, experiment setups and results, failed attempts, alternatives considered, references, and the reasoning behind decisions. Organize it so a reviewer or future maintainer can reconstruct how the conclusion was reached.
+Use a descriptive dropdown label, such as “Full derivation and worked examples” or “Implementation and test results.” A reader should know what opening it will reveal. Keep conclusions, important assumptions, and caveats visible; the reader should be able to apply the technique without opening every section.
 
-It is not required reading for everyone. It is the record that lets a reviewer check the evidence and lets future you or future me understand what happened behind the note.
+``````{dropdown} MyST syntax for the reference layer
+Use the native dropdown directive, with an outer fence longer than any code fences inside it:
 
-**Keep the explanation small, but keep the evidence accessible.** Readers should be able to grasp the technique without opening the supporting material—and investigate it thoroughly when they do.
+`````markdown
+````{dropdown} Implementation and test results
+Preserve the complete example, supporting evidence, and sources here.
+
+```python
+result = distinctive_technique(input_data)
+```
+````
+`````
+
+The dropdown is closed by default. Native MyST content supports equations, code, tables, and references without a separate document or handwritten HTML widget. Keep nesting shallow. Tabs work for alternatives such as Python versus JavaScript; they should not divide an explanation from its reference material.
+``````
+
+````{dropdown} What belongs in the supporting layer
+Preserve derivations, full implementations, architectural details, experiment setups and results, failed attempts that explain a decision, alternatives considered, references, and the reasoning behind decisions. Organize them so a reviewer or future maintainer can reconstruct how the conclusion was reached.
+
+Routine setup, wrappers, and other reconstructible glue can stay out of the visible explanation. Bring any part back into view when it contains a non-obvious constraint or changes correctness.
+
+The supporting layer makes a concise note auditable and maintainable. Folding content changes its presentation, not the amount of evidence worth keeping.
+````
+
+## Make the note easy to find again
+
+For a new article, use `YYYY-MM-DD-slug.md` and matching `date: YYYY-MM-DD` frontmatter alongside the title and description. Keep the original creation date stable when editing. Existing filenames stay unchanged to preserve links.
+
+Keep the title human-readable. The notebook navigation displays dates separately and groups articles by month, newest first.

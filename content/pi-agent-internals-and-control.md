@@ -1,4 +1,5 @@
 ---
+date: 2026-09-13
 title: "Inside Pi: Minimal Agents, Extensibility, and Control"
 description: Understand Pi's agent loop, context boundaries, extension system, and practical trade-offs against Codex, Claude Code, and T3 Code.
 ---

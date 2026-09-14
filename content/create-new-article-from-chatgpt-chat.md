@@ -1,4 +1,5 @@
 ---
+date: 2026-09-11
 title: Create New Article from ChatGPT Chat
 description: A first-person account of authoring a notebook article from ordinary Chat using the connected GitHub plugin and GitHub Actions rather than a local repository checkout.
 ---

@@ -1,0 +1,31 @@
+{
+  "legacyPaths": [
+    "content/create-new-article-from-chatgpt-chat.md",
+    "content/create-new-article-from-chatgpt-work.md",
+    "content/durable-task-supervision-kernel.md",
+    "content/example.md",
+    "content/firstmate-durable-agent-supervision.md",
+    "content/firstmate-minimal-design-and-evidence.md",
+    "content/how-agent-managers-know-codex-status.md",
+    "content/how-hermes-uses-codex-quota.md",
+    "content/how-t3-code-uses-codex.md",
+    "content/iphone-18-pro-xfinity-existing-customer-deals.md",
+    "content/pi-agent-internals-and-control.md",
+    "content/pi-codex-quota-custom-harness.md",
+    "content/relativity-derivations-and-evidence.md",
+    "content/t3-code-stack-and-architecture.md",
+    "content/t3-code-stack-evidence-and-alternatives.md",
+    "content/task-first-agent-manager.md",
+    "content/typeless-alternatives-comparison.md",
+    "content/typeless-alternatives-evidence-and-testing.md",
+    "content/understanding-einstein-relativity.md",
+    "content/writing-a-good-technical-note.md",
+    "content/zero-number-placeholder-natural-numbers.md"
+  ],
+  "compatibilityPages": {
+    "content/relativity-derivations-and-evidence.md": "content/understanding-einstein-relativity.md#relativity-reference",
+    "content/typeless-alternatives-evidence-and-testing.md": "content/typeless-alternatives-comparison.md#typeless-reference",
+    "content/firstmate-minimal-design-and-evidence.md": "content/firstmate-durable-agent-supervision.md#firstmate-reference",
+    "content/t3-code-stack-evidence-and-alternatives.md": "content/t3-code-stack-and-architecture.md#t3-stack-reference"
+  }
+}

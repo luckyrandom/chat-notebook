@@ -27,7 +27,7 @@ Use the shortest structure that makes the note easy to recover later. A good def
 
 **Context or problem → key idea → explanation or evidence → caveats → supporting detail.**
 
-Do not add sections merely to make the note look formal.
+Do not add sections merely to make the note look formal. Default to one self-contained note per request. Keep long supporting evidence in named, collapsed sections within the same note; keep the conclusion and essential caveats visible. Length alone is not a reason to create a companion document. Separate documents are appropriate only when explicitly requested or when each topic stands on its own.
 
 ## Keep claims grounded
 
