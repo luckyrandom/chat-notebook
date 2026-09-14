@@ -12,6 +12,8 @@ project:
     - file: content/how-t3-code-uses-codex.md
     - file: content/task-first-agent-manager.md
     - file: content/how-agent-managers-know-codex-status.md
+    - file: content/firstmate-durable-agent-supervision.md
+    - file: content/firstmate-minimal-design-and-evidence.md
     - file: content/pi-codex-quota-custom-harness.md
     - file: content/how-hermes-uses-codex-quota.md
     - file: content/iphone-18-pro-xfinity-existing-customer-deals.md
