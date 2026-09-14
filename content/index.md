@@ -10,6 +10,9 @@ Browse newest first, or use search to find a topic. Dates show when an article w
 
 ## September 2026
 
+- **2026-09-14** — [How DeepSeek Updates System Prompts Without Losing the Cache](2026-09-14-deepseek-system-prompt-cache.md)
+  How DeepSeek Harness appends complete system-prompt updates to preserve cached history, and where that guarantee stops.
+
 - **2026-09-13** — [Durable Task Supervision Kernel](durable-task-supervision-kernel.md)
   A minimal task-first supervision architecture that separates task state from executor state and avoids assumptions about Git, specific coding agents, or terminal backends.
 

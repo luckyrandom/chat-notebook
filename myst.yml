@@ -7,6 +7,8 @@ project:
     - file: content/index.md
     - title: September 2026
       children:
+        - file: content/2026-09-14-deepseek-system-prompt-cache.md
+          title: 09-14 · How DeepSeek Updates System Prompts Without Losing the Cache
         - file: content/durable-task-supervision-kernel.md
           title: 09-13 · Durable Task Supervision Kernel
         - file: content/firstmate-durable-agent-supervision.md
