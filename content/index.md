@@ -20,6 +20,8 @@ A place for ideas worth keeping, developed through conversation and published as
 
 [How Agent Managers Know the Status of a Codex Conversation](how-agent-managers-know-codex-status.md) explains how app-server events, hooks, process supervision, terminal observation, Git, and delivery systems become separate activity, attention, outcome, and delivery projections.
 
+[Firstmate: Durable Supervision Beyond Native Subagents](firstmate-durable-agent-supervision.md) traces the workflow, compares Codex and Claude delegation, maps Herdr's role, and extracts the core ideas worth adopting without the full distribution. Its [implementation and evidence companion](firstmate-minimal-design-and-evidence.md) provides a minimal data model, durable-message protocols, failure tests, and pinned source references.
+
 [How Pi Uses Codex Quota Without the Codex Harness](pi-codex-quota-custom-harness.md) explains Pi's direct OAuth-backed model connection, the distinction from embedding Codex, and a minimal custom harness with a supporting TypeScript example.
 
 [How Hermes Uses Codex Quota in Two Runtime Modes](how-hermes-uses-codex-quota.md) explains Hermes' direct Responses-based loop, its optional Codex app-server runtime, the two credential stores, and how account-backed usage is attributed.
