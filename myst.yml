@@ -10,6 +10,8 @@ project:
     - file: content/create-new-article-from-chatgpt-chat.md
     - file: content/writing-a-good-technical-note.md
     - file: content/how-t3-code-uses-codex.md
+    - file: content/t3-code-stack-and-architecture.md
+    - file: content/t3-code-stack-evidence-and-alternatives.md
     - file: content/task-first-agent-manager.md
     - file: content/how-agent-managers-know-codex-status.md
     - file: content/pi-codex-quota-custom-harness.md
