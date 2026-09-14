@@ -1,4 +1,5 @@
 ---
+date: 2026-09-11
 title: How T3 Code Uses Codex and ChatGPT Authentication
 description: A source-grounded guide to T3's Codex app-server integration, official SDK alternatives, credential ownership, and the smallest useful client examples.
 ---

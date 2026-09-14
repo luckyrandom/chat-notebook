@@ -1,4 +1,5 @@
 ---
+date: 2026-09-11
 title: Create New Article from ChatGPT Work
 description: A first-person account of writing, committing, building, and verifying a notebook article from the Work environment.
 ---

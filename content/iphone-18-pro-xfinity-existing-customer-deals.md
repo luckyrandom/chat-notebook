@@ -1,4 +1,5 @@
 ---
+date: 2026-09-13
 title: iPhone 18 Pro on Xfinity Mobile — Existing-Customer Deal Research
 description: September 2026 research on real iPhone upgrade discounts, Mobile Plus costs and data, upgrade-program traps, and whether to wait for holiday deals.
 ---

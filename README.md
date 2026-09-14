@@ -27,6 +27,12 @@ For drafts, return the source, pull request, commit, and Actions links with thei
 
 The default handoff is links and status, not ZIPs or attachments. Do not create or download archive bundles, including for internal verification, unless the user explicitly requests an archive, offline bundle, or artifact-level inspection. Download tools may automatically attach files to the chat. If the live page cannot be checked, report that limitation rather than substituting a build archive.
 
+## Article structure and navigation
+
+Default to one self-contained article per request. Keep the core explanation and essential caveats visible; put long derivations, implementations, and evidence in named MyST dropdowns on the same page. Tabs are for alternative examples, not for separating an article from its references. See [Writing a Good Technical Note](content/writing-a-good-technical-note.md).
+
+New articles use `content/YYYY-MM-DD-slug.md` and `title`, `description`, and `date` frontmatter. The date records original creation and stays stable on edits. The contract is defined in `schema/article.schema.json`; `schema/articles.json` records legacy paths and compatibility pages. Run `npm run articles:sync` after adding or changing metadata, then `npm run articles:check` to validate metadata and generated navigation. Existing undated filenames retain their URLs. Navigation groups articles by month, newest first, while keeping human-readable titles.
+
 ## Skill-only ChatGPT plugin
 
 This repository also distributes a skill-only `chat-notebook` plugin. The marketplace manifest is `.agents/plugins/marketplace.json`, and the plugin source is under `plugins/chat-notebook/`.

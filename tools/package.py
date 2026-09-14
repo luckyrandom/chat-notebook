@@ -6,7 +6,7 @@ from pathlib import Path, PurePosixPath
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_TREES = ('content', 'themes', 'tools', 'docs', '.github/workflows')
+SOURCE_TREES = ('content', 'themes', 'tools', 'docs', 'schema', '.github/workflows')
 SOURCE_FILES = ('myst.yml', 'package.json', 'package-lock.json', 'README.md', '.nvmrc', '.gitignore')
 MANIFEST = 'notebook-manifest.json'
 

@@ -17,6 +17,10 @@ Before creating, editing, saving, publishing, or verifying a Chat Notebook artic
 
 Treat that repository file as the canonical workflow. It may evolve independently of this bundled routing skill. Inspect the current repository state as that workflow requires rather than relying on remembered structure or commands.
 
+## Article shape
+
+Default to one self-contained article with a concise visible explanation and same-page MyST dropdowns for long reference material. Keep essential caveats visible. New articles use `YYYY-MM-DD-slug.md` and matching original-creation `date` frontmatter; preserve existing URLs. Load the canonical workflow for the full schema and navigation rules.
+
 ## Preserve publication boundaries
 
 Keep these states distinct:

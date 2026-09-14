@@ -5,27 +5,50 @@ project:
   description: Notes and explanations developed through conversation.
   toc:
     - file: content/index.md
-    - file: content/example.md
-    - file: content/create-new-article-from-chatgpt-work.md
-    - file: content/create-new-article-from-chatgpt-chat.md
-    - file: content/writing-a-good-technical-note.md
-    - file: content/how-t3-code-uses-codex.md
-    - file: content/t3-code-stack-and-architecture.md
-    - file: content/t3-code-stack-evidence-and-alternatives.md
-    - file: content/task-first-agent-manager.md
-    - file: content/durable-task-supervision-kernel.md
-    - file: content/how-agent-managers-know-codex-status.md
-    - file: content/firstmate-durable-agent-supervision.md
+    - title: September 2026
+      children:
+        - file: content/durable-task-supervision-kernel.md
+          title: 09-13 · Durable Task Supervision Kernel
+        - file: content/firstmate-durable-agent-supervision.md
+          title: "09-13 · Firstmate: Durable Supervision Beyond Native Subagents"
+        - file: content/iphone-18-pro-xfinity-existing-customer-deals.md
+          title: 09-13 · iPhone 18 Pro on Xfinity Mobile — Existing-Customer Deal Research
+        - file: content/pi-agent-internals-and-control.md
+          title: "09-13 · Inside Pi: Minimal Agents, Extensibility, and Control"
+        - file: content/t3-code-stack-and-architecture.md
+          title: "09-13 · Inside T3 Code: UI, Frontend, and Backend"
+        - file: content/typeless-alternatives-comparison.md
+          title: "09-13 · Typeless Alternatives: What to Choose and Why"
+        - file: content/understanding-einstein-relativity.md
+          title: "09-13 · Understanding Einstein's Relativity: Why, How, and Evidence"
+        - file: content/zero-number-placeholder-natural-numbers.md
+          title: 09-13 · 零为什么是数：自然数、占位符与数系发展的两条历史
+        - file: content/how-agent-managers-know-codex-status.md
+          title: 09-12 · How Agent Managers Know the Status of a Codex Conversation
+        - file: content/how-hermes-uses-codex-quota.md
+          title: 09-12 · How Hermes Uses Codex Quota in Two Runtime Modes
+        - file: content/pi-codex-quota-custom-harness.md
+          title: 09-12 · How Pi Uses Codex Quota Without the Codex Harness
+        - file: content/create-new-article-from-chatgpt-chat.md
+          title: 09-11 · Create New Article from ChatGPT Chat
+        - file: content/create-new-article-from-chatgpt-work.md
+          title: 09-11 · Create New Article from ChatGPT Work
+        - file: content/example.md
+          title: 09-11 · Why averaging reduces noise
+        - file: content/how-t3-code-uses-codex.md
+          title: 09-11 · How T3 Code Uses Codex and ChatGPT Authentication
+        - file: content/task-first-agent-manager.md
+          title: 09-11 · A Task-First Operating System for Coding Agents
+        - file: content/writing-a-good-technical-note.md
+          title: 09-11 · Writing a Good Technical Note
     - file: content/firstmate-minimal-design-and-evidence.md
-    - file: content/pi-codex-quota-custom-harness.md
-    - file: content/how-hermes-uses-codex-quota.md
-    - file: content/iphone-18-pro-xfinity-existing-customer-deals.md
-    - file: content/pi-agent-internals-and-control.md
-    - file: content/zero-number-placeholder-natural-numbers.md
-    - file: content/understanding-einstein-relativity.md
+      hidden: true
     - file: content/relativity-derivations-and-evidence.md
-    - file: content/typeless-alternatives-comparison.md
+      hidden: true
+    - file: content/t3-code-stack-evidence-and-alternatives.md
+      hidden: true
     - file: content/typeless-alternatives-evidence-and-testing.md
+      hidden: true
 site:
   template: book-theme
   options:

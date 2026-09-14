@@ -8,6 +8,12 @@ The repository is the handoff between the authoring assistant and the builder. S
 
 Build archives contain the generated static site and a manifest. Hashes detect accidental or deliberate byte changes relative to a known revision; they do not establish author identity. Remote promotion must authenticate the caller and compare the approved revision to trusted stored state.
 
+## Article contract
+
+One article contains its concise explanation and its longer reference layer. Native MyST dropdown directives render supporting material collapsed by default while retaining semantic source for equations, code, citations, and tables. Essential caveats remain visible. Tabs are reserved for alternatives. Separate reference companions are not the default.
+
+Article frontmatter records a readable title, concise description, and original creation date. New filenames use `YYYY-MM-DD-slug.md`; historical paths remain stable. Date-based navigation groups articles by month, newest first, without encoding dates into titles.
+
 ## Remaining milestones
 
 1. Completed: repository created, made public, source uploaded, and initial GitHub CI passed.

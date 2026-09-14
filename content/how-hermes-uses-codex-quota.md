@@ -1,4 +1,5 @@
 ---
+date: 2026-09-12
 title: How Hermes Uses Codex Quota in Two Runtime Modes
 description: Hermes can use ChatGPT-backed Codex access through its own Responses-based agent loop or through an opt-in Codex app-server subprocess.
 ---

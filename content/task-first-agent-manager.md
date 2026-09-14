@@ -1,4 +1,5 @@
 ---
+date: 2026-09-11
 title: A Task-First Operating System for Coding Agents
 description: Design an agent manager around durable tasks, versioned briefs, replaceable runs, delivery state, and an attention inbox instead of a sidebar of chats.
 ---

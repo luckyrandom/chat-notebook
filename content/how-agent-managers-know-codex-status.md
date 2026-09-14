@@ -1,4 +1,5 @@
 ---
+date: 2026-09-12
 title: How Agent Managers Know the Status of a Codex Conversation
 description: A source-grounded model for deriving Codex activity, attention, run outcome, and delivery state from app-server events, hooks, process supervision, terminal observation, and repository facts.
 ---

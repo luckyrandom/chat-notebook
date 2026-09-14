@@ -1,4 +1,5 @@
 ---
+date: 2026-09-12
 title: How Pi Uses Codex Quota Without the Codex Harness
 description: Reuse ChatGPT-backed Codex access through Pi's model provider while owning the agent loop, tools, task state, and execution policy.
 ---

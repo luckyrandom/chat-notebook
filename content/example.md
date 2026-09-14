@@ -1,9 +1,14 @@
 ---
+date: 2026-09-11
 title: Why averaging reduces noise
+description: A concise mathematical example with a collapsible derivation, table, figure, and cross-reference.
 ---
 
 Suppose independent measurements have the same mean $\mu$ and variance $\sigma^2$. Averaging more measurements preserves the mean while reducing uncertainty.
 
+The standard deviation of the average falls as $1/\sqrt n$: four independent measurements halve it; sixteen reduce it to a quarter.
+
+````{dropdown} Derivation and numerical reference
 ## The calculation
 
 For $\bar X_n = (X_1+\cdots+X_n)/n$, independence gives
@@ -22,6 +27,8 @@ Equation [](#mean-variance) means the standard deviation decreases as $1/\sqrt n
 | 1 | 1 |
 | 4 | 1/2 |
 | 16 | 1/4 |
+
+````
 
 ```{figure} assets/averaging.svg
 :label: averaging-figure
