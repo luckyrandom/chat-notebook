@@ -4,12 +4,9 @@ title: "Inside Pi: Minimal Agents, Extensibility, and Control"
 description: Understand Pi's agent loop, context boundaries, extension system, and practical trade-offs against Codex, Claude Code, and T3 Code.
 ---
 
-**Reviewed:** September 13, 2026, America/Los_Angeles.  
-**Scope:** Pi, the TypeScript coding-agent project now hosted at `earendil-works/pi`. The original question's “PyAgent,” “Cloud Code,” and “T3” are interpreted as Pi, Claude Code, and T3 Code. This is not a review of an unrelated Python framework named PyAgent. Pi implementation references are pinned to commit `71dca871bc80b6bc97be37f0ca3189399d651fff`; competitor documentation was checked on the review date. This is source-based architectural research, not a hands-on usability study or a controlled performance benchmark.
-
 ## The durable insight
 
-**Pi's important idea is not a new agent algorithm. It is making the boundaries around an ordinary agent loop unusually easy to inspect, replace, and compose.** Its model connection, execution loop, session/context machinery, and interface are separate pieces. Its default coding vocabulary is small, but its extension surface reaches well beyond adding another tool.[^ai][^agent][^coding]
+**[Pi](https://github.com/earendil-works/pi)'s important idea is not a new agent algorithm. It is making the boundaries around an ordinary agent loop unusually easy to inspect, replace, and compose.** Its model connection, execution loop, session/context machinery, and interface are separate pieces. Its default coding vocabulary is small, but its extension surface reaches well beyond adding another tool.[^ai][^agent][^coding]
 
 That distinction explains the appeal: someone can keep Pi's working terminal agent while changing how it chooses context, executes tools, stores application state, or presents a workflow—without immediately maintaining a fork. The trade-off is that more workflow and safety policy becomes the integrator's responsibility.[^extensions][^coding]
 
@@ -77,10 +74,10 @@ A reliable agent needs considerably more than the demonstration. It must preserv
 
 | Layer | Main responsibility | When to use it directly |
 | --- | --- | --- |
-| `pi-ai` | Model/provider abstraction, authentication resolution, streaming, message and tool formats, usage metadata. | You want to own the loop and only reuse model connectivity. |
-| `pi-agent-core` | Stateful execution loop, tool dispatch, events, context conversion, steering, and follow-up queues. | You want a reusable agent runtime with application-defined tools and policy. |
-| `pi-coding-agent` | Coding tools, sessions, compaction, resource loading, extensions, and the application workflow. | You want Pi's working coding agent or its session SDK. |
-| `pi-tui` / interactive application | Terminal components, rendering, editor, and interaction. | You want the terminal experience, or want to customize it rather than build a new UI. |
+| [pi-ai](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/ai/README.md) | Model/provider abstraction, authentication resolution, streaming, message and tool formats, usage metadata. | You want to own the loop and only reuse model connectivity. |
+| [pi-agent-core](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/agent/README.md) | Stateful execution loop, tool dispatch, events, context conversion, steering, and follow-up queues. | You want a reusable agent runtime with application-defined tools and policy. |
+| [pi-coding-agent](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/coding-agent/README.md) | Coding tools, sessions, compaction, resource loading, extensions, and the application workflow. | You want Pi's working coding agent or its session SDK. |
+| [pi-tui](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/tui/README.md) / interactive application | Terminal components, rendering, editor, and interaction. | You want the terminal experience, or want to customize it rather than build a new UI. |
 
 These are integration boundaries, not four independent products that must all be imported by every application.[^ai][^agent][^coding][^extensions]
 
@@ -307,9 +304,9 @@ The following path is more useful than reading the monorepo from top to bottom. 
 
 | Read | Question it answers |
 | --- | --- |
-| `packages/agent/src/agent-loop.ts` — especially `runLoop`, `streamAssistantResponse`, and tool execution helpers.[^loop] | What causes another model call, when can tools run, and how are results ordered? |
-| `packages/agent/README.md`.[^agent] | What can an application configure without adopting the coding UI? |
-| `packages/ai/README.md`.[^ai] | Where does model connectivity end and application execution begin? |
+| [packages/agent/src/agent-loop.ts](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/agent/src/agent-loop.ts) — especially `runLoop`, `streamAssistantResponse`, and tool execution helpers.[^loop] | What causes another model call, when can tools run, and how are results ordered? |
+| [packages/agent/README.md](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/agent/README.md).[^agent] | What can an application configure without adopting the coding UI? |
+| [packages/ai/README.md](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/ai/README.md).[^ai] | Where does model connectivity end and application execution begin? |
 | Coding-agent session format and compaction documentation.[^session][^compaction] | How does persistent history become a bounded working context? |
 | Coding-agent extension documentation.[^extensions] | Which behaviors can be changed in-process, and what are the ordering and privilege consequences? |
 | Coding-agent SDK and RPC documentation.[^sdk][^rpc] | Should the host embed Pi or supervise a separate Pi process? |
@@ -318,6 +315,12 @@ The following path is more useful than reading the monorepo from top to bottom. 
 The main lesson survives changes in individual APIs: **choose the layer whose policy you actually need to own.** A better model client, a better agent loop, and a better agent manager solve different problems.
 
 ## References
+
+````{dropdown} Research scope, revision, and methodology
+**Reviewed:** September 13, 2026, America/Los_Angeles.
+
+**Scope:** Pi, the TypeScript coding-agent project now hosted at [earendil-works/pi](https://github.com/earendil-works/pi). The original question's “PyAgent,” “Cloud Code,” and “T3” are interpreted as Pi, [Claude Code](https://code.claude.com/docs/en/agent-sdk/overview), and [T3 Code](https://github.com/pingdotgg/t3code). This is not a review of an unrelated Python framework named PyAgent. Pi implementation references are pinned to [commit 71dca87](https://github.com/earendil-works/pi/commit/71dca871bc80b6bc97be37f0ca3189399d651fff); competitor documentation was checked on the review date. This is source-based architectural research, not a hands-on usability study or a controlled performance benchmark.
+````
 
 [^ai]: Pi, [model-library README](https://github.com/earendil-works/pi/blob/71dca871bc80b6bc97be37f0ca3189399d651fff/packages/ai/README.md). Provider collections, tool-capable models, streaming, authentication, message handling, and cross-provider integration.
 
